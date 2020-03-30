@@ -1,9 +1,9 @@
 <div class="container">
 	<div class="row">
 
-		<h1>Contact Us</h1>
+		<h1>Career</h1>
 		<hr />
-		<p>This is a Contact Us Test Page</p>
+		<p>This is a Career Page</p>
 
 	</div>
 

@@ -20,7 +20,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Stories Of Sydney - ${title}</title>
+<title>Online Operation Market - ${title}</title>
+
 <script>
 	window.menu = '${title}';
 </script>
@@ -55,14 +56,20 @@
 				<%@include file="about.jsp"%>
 			</c:if>
 
+			<!--  List Only when user clicks contact -->
 			<c:if test="${userClickContact == true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
 
+			<!--  Load only when user clicks listProducts -->
 			<c:if test="${userClicklistProduct == true}">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
 
+			<!--  Load only when user clicks Career -->
+			<c:if test="${userClickCareer == true}">
+				<%@include file="career.jsp"%>
+			</c:if>
 		</div>
 
 		<!-- Footer -->
