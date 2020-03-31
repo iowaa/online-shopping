@@ -30,10 +30,12 @@
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
 <!-- BootStrap Readable Theme -->
-<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
+
+<!--  Adding breadcrumb to the project -->
+<link href="${css}/breadcrumb.css" rel="stylesheet">
 
 </head>
 
@@ -62,7 +64,8 @@
 			</c:if>
 
 			<!--  Load only when user clicks listProducts -->
-			<c:if test="${userClicklistProduct == true}">
+			<c:if
+				test="${userClickAllProducts == true or userClickCategoryProducts == true}">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
 

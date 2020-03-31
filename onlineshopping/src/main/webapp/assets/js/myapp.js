@@ -3,11 +3,7 @@ $(function() {
 	// Solving the active menu problem
 	switch (menu) {
 
-	default:
-		$('#home').addClass('active');
-		break;
-
-	case 'listProducts':
+	case 'All Products':
 		$('#listProducts').addClass('active');
 		break;
 
@@ -15,12 +11,17 @@ $(function() {
 		$('#career').addClass('active');
 		break;
 
-	case 'Contact Us':
+	case 'Contact':
 		$('#contact').addClass('active');
 		break;
 
 	case 'About Us':
 		$('#about').addClass('active');
+		break;
+
+	default:
+		$('#listProducts').addClass('active');
+		$('#a_' + menu).addClass('active');
 		break;
 
 	}
