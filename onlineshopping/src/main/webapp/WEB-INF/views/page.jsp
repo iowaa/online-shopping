@@ -24,6 +24,8 @@
 
 <script>
 	window.menu = '${title}';
+
+	window.contextPath = '${contextPath}'
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -31,6 +33,9 @@
 
 <!-- BootStrap Readable Theme -->
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+
+<!-- BootStrap Datatable   -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -74,6 +79,11 @@
 			<c:if test="${userClickCareer == true}">
 				<%@include file="career.jsp"%>
 			</c:if>
+
+			<!--  Load only when user click single product -->
+			<c:if test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
 		</div>
 
 		<!-- Footer -->
@@ -82,6 +92,13 @@
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.min.js"></script>
+		_
+
+		<!-- Datatable Plugins -->
+		<script src="${js}/jquery.dataTables.js"></script>
+
+		<!-- Datatable bootstrap script  -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
 
 		<!--  Own JSP FIle -->
 		<script src="${js}/myapp.js"></script>

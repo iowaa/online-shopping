@@ -10,6 +10,13 @@
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+
+		<!-- For throwing Exception for Error Page -->
+		<init-param>
+			<param-name>throwExceptionIfNoHandlerFound</param-name>
+			<param-value>true</param-value>
+		</init-param>
+
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 

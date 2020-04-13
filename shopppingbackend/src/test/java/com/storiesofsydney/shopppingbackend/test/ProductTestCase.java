@@ -71,6 +71,6 @@ public class ProductTestCase {
 	public void testLatestActiveProducts() {
 		assertEquals("Something went wrong while listing the active Products by Category", 3,
 				productDAO.getLatestActiveProducts(3).size());
-		
-}
+
+	}
 }

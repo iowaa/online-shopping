@@ -101,6 +101,7 @@ $(function() {
 					}
 					else{
 						str+= '<a href = "'+window.contextPath+'/cart/add/'+data+'/product" class="btn btn-success">Add to Cart</a>';
+
 					}
 					
 					return str;
