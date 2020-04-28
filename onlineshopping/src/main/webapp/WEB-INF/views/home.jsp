@@ -5,7 +5,7 @@
 		<div class="col-lg-3">
 
 			<%@ include file="./shared/sidebar.jsp"%>
-			
+
 		</div>
 		<!-- /.col-lg-3 -->
 
@@ -21,6 +21,7 @@
 				</ol>
 				<div class="carousel-inner" role="listbox">
 					<div class="carousel-item active">
+
 						<img class="d-block img-fluid" src="http://placehold.it/900x350"
 							alt="First slide">
 					</div>
@@ -43,6 +44,8 @@
 					class="sr-only">Next</span>
 				</a>
 			</div>
+
+			<h1>Popular Items</h1>
 
 			<div class="row">
 
@@ -84,8 +87,10 @@
 
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="card h-100">
-						<a href="#"><img class="card-img-top"
-							src="http://placehold.it/700x400" alt=""></a>
+						<a href="http://localhost:8080/onlineshopping/show/1/product"><img
+							class="card-img-top"
+							src="http://localhost:8080/onlineshopping/resources/images/PRD9EA25C3456.jpg"
+							alt=""></a>
 						<div class="card-body">
 							<h4 class="card-title">
 								<a href="#">Item Three</a>

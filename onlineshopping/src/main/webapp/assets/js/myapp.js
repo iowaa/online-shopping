@@ -1,3 +1,4 @@
+
 $(function() {
 
 	// Solving the active menu problem
@@ -17,6 +18,10 @@ $(function() {
 
 	case 'About Us':
 		$('#about').addClass('active');
+		break;
+		
+	case 'Manage Products':
+		$('#manageProducts').addClass('active');
 		break;
 
 	default:
@@ -74,7 +79,7 @@ $(function() {
 			{
 				data : 'unitPrice',
 				mRender:function(data,type,row){
-					return '&#163;'+ data;
+					return '&#36;'+ data;
 				}
 
 			}, 
@@ -110,5 +115,63 @@ $(function() {
 			]
 		});
 	}
+	
+	// dismissing the alert after 3 seconds
+	
+	var $alert = $('.alert');
+	if($alert.length){
+		setTimeout(function(){
+			$alert.fadeOut('slow');
+		},3000)
+	}
+	
+	//
+	$('.switch input[type = "checkbox"]').on('change',function(){
+		
+		var checkbox = $(this);
+		var checkbox = checkbox.prop('checked');
+		var dMsg = (checked)? 'You want to activate the product?': 'You want to deactivate the product?';
+		
+		var value = checkbox.prop('value');
+		
+		bootbox.confirm({
+			size:'medium',
+			title:'Product Activation and Deactivation',
+			message:dMsg,
+			callback:function(confirmed){
+				
+				if(confirmed){
+					console.log(value);
+					bootbox.alert({
+						size:'medium',
+						title:'Information',
+						message:'You are going to perform operation on product' +value
+					});
+				}
+				else{
+					checkbox.prop('checked',!checked);
+				}
+			}
+		});
+	});
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -26,6 +26,10 @@
 
 	</bean>
 
+	<!-- ID Must be multipartResolver otherwise file will not uploads -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.support.StandardServletMultipartResolver" />
+
 	<!-- Loading the Static resources -->
 	<mvc:annotation-driven />
 	<mvc:resources location="/assets/"

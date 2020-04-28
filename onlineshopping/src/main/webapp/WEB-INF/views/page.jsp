@@ -14,11 +14,15 @@
 
 <head>
 
+
+
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+
+
 
 <title>Online Operation Market - ${title}</title>
 
@@ -27,6 +31,7 @@
 
 	window.contextPath = '${contextPath}'
 </script>
+
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
@@ -40,8 +45,12 @@
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
 
+<link href="${css}/review.css" rel="stylesheet">
+
 <!--  Adding breadcrumb to the project -->
 <link href="${css}/breadcrumb.css" rel="stylesheet">
+
+
 
 </head>
 
@@ -84,6 +93,11 @@
 			<c:if test="${userClickShowProduct == true}">
 				<%@include file="singleProduct.jsp"%>
 			</c:if>
+
+			<!--  Load only when user click manage product -->
+			<c:if test="${UserClickManageProducts == true}">
+				<%@include file="manageProducts.jsp"%>
+			</c:if>
 		</div>
 
 		<!-- Footer -->
@@ -92,6 +106,7 @@
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.min.js"></script>
+
 		_
 
 		<!-- Datatable Plugins -->
@@ -99,6 +114,10 @@
 
 		<!-- Datatable bootstrap script  -->
 		<script src="${js}/dataTables.bootstrap.js"></script>
+
+		<!-- Bootbox -->
+		<script src="${js}/bootbox.min.js"></script>
+
 
 		<!--  Own JSP FIle -->
 		<script src="${js}/myapp.js"></script>

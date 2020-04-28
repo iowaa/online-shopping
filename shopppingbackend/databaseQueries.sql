@@ -40,9 +40,9 @@ CREATE TABLE product (
 
 
 -- adding three categories
-INSERT INTO category (name, description,image_url,is_active) VALUES ('Laptop', 'This is description for Laptop category!', 'CAT_1.png', true);
-INSERT INTO category (name, description,image_url,is_active) VALUES ('Television', 'This is description for Television category!', 'CAT_2.png', true);
-INSERT INTO category (name, description,image_url,is_active) VALUES ('Mobile', 'This is description for Mobile category!', 'CAT_3.png', true);
+INSERT INTO category (name, description,image_url,is_active) VALUES ('Cement And Concreting', 'This is description for Cement and Concreting Category!', 'CNC.png', true);
+INSERT INTO category (name, description,image_url,is_active) VALUES ('Safety And Workwear', 'This is description for Safety and Workwear!', 'SAW.png', true);
+INSERT INTO category (name, description,image_url,is_active) VALUES ('General Hardware', 'This is description for General Hardware!', 'GH.png', true);
 
 -- adding three users 
 INSERT INTO user_detail 

@@ -11,7 +11,7 @@
 
 	</appender>
 
-	<logger name="com.storiesofsydney" level="DEBUG"
+	<logger name="com.storiesofsydney" level="INFO"
 		additivity="false">
 		<appender-ref ref="consoleAppender" />
 	</logger>

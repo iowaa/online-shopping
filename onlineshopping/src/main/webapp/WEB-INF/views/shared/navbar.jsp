@@ -1,4 +1,5 @@
 
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<div class="container">
 		<a class="navbar-brand" href="${contextPath}/home">Online
@@ -17,13 +18,10 @@
 				<li id="listProducts" class="nav-item"><a class="nav-link"
 					href="${contextPath}/show/all/products">View Products</a></li>
 
-				<li id="career" class="nav-item"><a class="nav-link"
-					href="${contextPath}/career">Career</a></li>
+				<li id="listProducts" class="nav-item"><a class="nav-link"
+					href="${contextPath}/manage/products">Manage Products</a></li>
 
-				<li id="contact" class="nav-item"><a class="nav-link"
-					href="${contextPath}/contact">Contact</a></li>
-
-				<li id="about" class="nav-item"><a class="nav-link"
+				<li id="manageProducts" class="nav-item"><a class="nav-link"
 					href="${contextPath}/about">About</a></li>
 			</ul>
 		</div>
