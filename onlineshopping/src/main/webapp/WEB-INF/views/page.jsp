@@ -105,9 +105,15 @@
 
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>
-		<script src="${js}/bootstrap.min.js"></script>
 
-		_
+		<!-- JQuery Validation -->
+		<script src="${js}/jquery.validate.js"></script>
+
+		<!-- Own JSP File -->
+		<script src="${js}/validate.js"></script>
+
+
+		<script src="${js}/bootstrap.min.js"></script>
 
 		<!-- Datatable Plugins -->
 		<script src="${js}/jquery.dataTables.js"></script>
@@ -118,6 +124,8 @@
 		<!-- Bootbox -->
 		<script src="${js}/bootbox.min.js"></script>
 
+		<!--  Custom JS file , will not work if in myapp.js-->
+		<script src="${js}/bootbox.alert.js"></script>
 
 		<!--  Own JSP FIle -->
 		<script src="${js}/myapp.js"></script>

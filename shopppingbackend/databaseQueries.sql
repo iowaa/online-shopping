@@ -33,6 +33,7 @@ CREATE TABLE product (
 	supplier_id INT,
 	purchases INT DEFAULT 0,
 	views INT DEFAULT 0,
+	review VARCHAR(999),
 	CONSTRAINT pk_product_id PRIMARY KEY (id),
  	CONSTRAINT fk_product_category_id FOREIGN KEY (category_id) REFERENCES category (id),
 	CONSTRAINT fk_product_supplier_id FOREIGN KEY (supplier_id) REFERENCES user_detail(id)

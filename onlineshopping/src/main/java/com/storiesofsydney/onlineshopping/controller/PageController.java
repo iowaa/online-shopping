@@ -105,7 +105,8 @@ public class PageController {
 
 	// Viewing a single product
 	@RequestMapping(value = "/show/{id}/product")
-	public ModelAndView showSingleProduct(@PathVariable int id) throws ProductNotFoundException {
+	public ModelAndView showSingleProduct(@PathVariable int id)
+			throws ProductNotFoundException {
 		ModelAndView mv = new ModelAndView("page");
 		Product product = productDAO.get(id);
 
@@ -119,9 +120,15 @@ public class PageController {
 
 		mv.addObject("title", product.getName());
 		mv.addObject("product", product);
+	//	mv.addObject("product", product1);
 		mv.addObject("userClickShowProduct", true);
 
+//		if (product != null) {
+//			productDAO.update(product1);
+//		}
+//		
 		return mv;
+
 	}
 
 }

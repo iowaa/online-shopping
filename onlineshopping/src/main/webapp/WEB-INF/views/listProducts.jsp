@@ -46,13 +46,15 @@
 								class="table table-striped table-bordered">
 								<thead>
 									<tr>
-										<th></th>
+										<th>S.No</th>
+										<th>Image</th>
 										<th>Name</th>
 										<th>Brand</th>
 										<th>Price</th>
-										<th>Quantity Available</th>
+										<th>Qty. Available</th>
 										<th></th>
 									</tr>
+
 
 								</thead>
 

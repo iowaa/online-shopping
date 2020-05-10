@@ -93,9 +93,9 @@
 							alt=""></a>
 						<div class="card-body">
 							<h4 class="card-title">
-								<a href="#">Item Three</a>
+								<a href="#">Davco Render 20kg	</a>
 							</h4>
-							<h5>$24.99</h5>
+							<h5>$14.00</h5>
 							<p class="card-text">Product Info</p>
 						</div>
 						<div class="card-footer">

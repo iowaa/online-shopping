@@ -1,4 +1,5 @@
 
+
 package com.storiesofsydney.shoppingbackend.dto;
 
 import java.util.UUID;
@@ -36,7 +37,6 @@ public class Product {
 	private double unitPrice;
 	private int quantity;
 	@Column(name = "is_active")
-	@JsonIgnore
 	private boolean active;
 	@JsonIgnore
 	@Column(name = "category_id")
@@ -46,6 +46,16 @@ public class Product {
 	private int supplierId;
 	private int purchases;
 	private int views;
+	
+	private String review;
+
+	public String getReview() {
+		return review;
+	}
+
+	public void setReview(String review) {
+		this.review = review;
+	}
 
 	@Transient
 	private MultipartFile file;
@@ -164,7 +174,7 @@ public class Product {
 		return "Product [id=" + id + ", code=" + code + ", name=" + name + ", brand=" + brand + ", description="
 				+ description + ", unitPrice=" + unitPrice + ", quantity=" + quantity + ", active=" + active
 				+ ", categoryId=" + categoryId + ", supplierId=" + supplierId + ", purchases=" + purchases + ", views="
-				+ views + ", file=" + file + "]";
+				+ views + ", review=" + review + ", file=" + file + "]";
 	}
 
 }
