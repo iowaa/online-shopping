@@ -26,7 +26,7 @@ public class HibernateConfig {
 	private final static String DATABASE_PASSWORD = "";
 
 	// dataSource bean will be available
-	@Bean
+	@Bean("dataSource")
 	public DataSource getDataSource() {
 		BasicDataSource dataSource = new BasicDataSource();
 
@@ -42,7 +42,7 @@ public class HibernateConfig {
 	@Bean
 	public SessionFactory getSessionFactory(DataSource dataSource) {
 		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
- 
+
 		builder.addProperties(getHibernateProperties());
 		builder.scanPackages("com.storiesofsydney.shoppingbackend.dto");
 		return builder.buildSessionFactory();
@@ -55,10 +55,12 @@ public class HibernateConfig {
 		properties.put("hibernate.show_sql", true);
 		properties.put("hibernate.format_sql", true);
 
+		properties.put("hibernate.hbm2dd1.auto", "update");
+
 		return properties;
 	}
 
-	//transactionManager Bean
+	// transactionManager Bean
 	@Bean
 	public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {
 		HibernateTransactionManager transcationManager = new HibernateTransactionManager(sessionFactory);

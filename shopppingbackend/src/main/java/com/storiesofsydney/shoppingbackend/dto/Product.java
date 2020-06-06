@@ -27,7 +27,6 @@ public class Product {
 	@NotBlank(message = "Please Enter the Product Name!")
 	private String name;
 	@NotBlank(message = "Please Enter the Brand Name!")
-
 	private String brand;
 	@JsonIgnore
 	@NotBlank(message = "Please Enter the description for Product!")

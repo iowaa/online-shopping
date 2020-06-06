@@ -22,7 +22,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-
+<meta name="_csrf" content="${_csrf.token}">
+<meta name="_csrf_header" content="${_csrf.headerName}">
 
 <title>Online Operation Market - ${title}</title>
 
@@ -31,14 +32,12 @@
 
 	window.contextPath = '${contextPath}'
 </script>
-
-
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
-<!-- BootStrap Readable Theme -->
-<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
+
+<!-- BootStrap Readable Theme -->
 <!-- BootStrap Datatable   -->
 <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
@@ -49,9 +48,6 @@
 
 <!--  Adding breadcrumb to the project -->
 <link href="${css}/breadcrumb.css" rel="stylesheet">
-
-
-
 </head>
 
 <body>
@@ -110,7 +106,7 @@
 		<script src="${js}/jquery.validate.js"></script>
 
 		<!-- Own JSP File -->
-		<script src="${js}/validate.js"></script>
+		<script src="${js}/categoryValidate.js"></script>
 
 
 		<script src="${js}/bootstrap.min.js"></script>

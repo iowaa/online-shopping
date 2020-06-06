@@ -3,6 +3,8 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <%@taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
+<%@taglib prefix="security"
+	uri="http://www.springframework.org/security/tags"%>
 
 <div class="container">
 
@@ -63,26 +65,32 @@
 
 		</c:choose>
 
-		<c:choose>
-			<c:when test="${product.quantity <1}">
-				<h6>
-					<a href="javascript:void(0)" class="btn btn-success disabled"><strike>Add
-							to Cart</strike></a>
-				</h6>
-			</c:when>
-			<c:otherwise>
-				<a href="${contextPath}/cart/add/${product.id}/product"
-					class="btn btn-success">Add to Cart</a>
-			</c:otherwise>
+		<security:authorize access="hasAuthority('USER')">
+			<c:choose>
+				<c:when test="${product.quantity <1}">
+					<h6>
+						<a href="javascript:void(0)" class="btn btn-success disabled"><strike>Add
+								to Cart</strike></a>
+					</h6>
+				</c:when>
+				<c:otherwise>
+					<a href="${contextPath}/cart/add/${product.id}/product"
+						class="btn btn-success">Add to Cart</a>
+				</c:otherwise>
 
-		</c:choose>
+			</c:choose>
+		</security:authorize>
+
+		<security:authorize access="hasAuthority('ADMIN')">
+			<a href="${contextPath}/manage/${product.id}/product"
+				class="btn btn-warning">Edit</a>
+		</security:authorize>
 
 		<a href="${contextPath}/show/all/products" class="btn btn-primary">Back</a>
 		<hr />
 		<h2>
 			<u>Customer Reviews</u>
 		</h2>
-
 		<sf:form modelAttribute=""
 			action="${contextPath}/show/${product.id}/product" method="POST"
 			class="form-horizontal">
@@ -94,16 +102,15 @@
 					<textarea type="textarea" path="review" id="review"
 						placeholder="Enter Product Review" class="form-control"></textarea>
 				</div>
-				<br/>
+				<br />
 
 				<div class="form-group">
 					<div class="col-md-offset-4 col-md-8">
 						<input type="submit" value="Submit" class="btn btn-primary" />
 					</div>
 				</div>
+			</div>
 		</sf:form>
-
-
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-8">

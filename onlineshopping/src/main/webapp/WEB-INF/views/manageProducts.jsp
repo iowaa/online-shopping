@@ -1,4 +1,6 @@
 <%@taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 
 <div class="container">
 	<div class="row">
@@ -79,7 +81,7 @@
 
 						<div class="form-group">
 							<label class="control-label col-md-4" for="brand">Enter
-								Product Description</label>
+								Product Review</label>
 							<div class="col-md-8">
 								<sf:textarea type="textarea" path="review" id="review"
 									placeholder="Enter Product Review (Optional)"
@@ -153,30 +155,31 @@
 
 		<div class="col-12">
 
-			<div style="overflow: auto">
 
-				<!--  Products table for Admin -->
-				<table id="adminProductsTable"
-					class="table table-scripted table-bordered">
+			<div class="container-fluid">
 
-					<thead>
-						<tr>
-							<th>Id</th>
-							<th>&#160;</th>
-							<th>Name</th>
-							<th>Brand</th>
-							<th>Quantity</th>
-							<th>Unit Price</th>
-							<th>Active</th>
-							<th>Edit</th>
-						</tr>
-					</thead>
-				</table>
+				<div class="table-responsive">
+					<!--  Products table for Admin -->
+					<table id="adminProductsTable"
+						class="table table-scripted table-bordered">
 
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>&#160;</th>
+								<th>Name</th>
+								<th>Brand</th>
+								<th>Quantity</th>
+								<th>Unit Price</th>
+								<th>Active</th>
+								<th>Edit</th>
+							</tr>
+						</thead>
+					</table>
+
+				</div>
 
 			</div>
-
-
 
 		</div>
 
@@ -198,7 +201,7 @@
 
 				<div class="modal-body">
 					<!--  Category Form -->
-					<sf:form id = "categoryForm" modelAttribute="category"
+					<sf:form id="categoryForm" modelAttribute="category"
 						action="${contextPath}/manage/category" method="POST"
 						class="form-horizontal">
 						<div class="form-group">

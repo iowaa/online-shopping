@@ -32,6 +32,19 @@ $(function() {
 		break;
 
 	}
+	
+	// to tackle the csrf token
+	var token = $('meta[name = "_csrf"]').attr('content');
+	var header = $('meta[name = "_csrf_header"]').attr('content');
+	
+	if(token.length>0 && header.length > 0){
+		
+		// set the token header for the ajax request
+		$(document).ajaxSend(function(e,xhr,options){
+			xhr.setRequestHeader(header, token);
+		});
+	}
+
 
 	// code for jquery dataTable
 
@@ -106,11 +119,19 @@ $(function() {
 					var str = '';
 					str+= '<a href = "'+window.contextPath+'/show/'+data+'/product" class="btn btn-primary">View</a>';
 					
-					if(row.quantity < 1){
+					if(userRole == 'ADMIN'){
+						str+= '<a href = "'+window.contextPath+'/manage/'+data+'/product" class="btn btn-warning">Edit</a>';
+
+					}
+					
+					else {
+						if(row.quantity < 1){
 						str+='<a href = "javascript:void(0)" class="btn btn-success disabled">Add to Cart</a>';
 					}
 					else{
-						str+= '<a href = "'+window.contextPath+'/cart/add/'+data+'/product" class="btn btn-success">Add to Cart</a>';
+							str+= '<a href = "'+window.contextPath+'/cart/add/'+data+'/product" class="btn btn-success">Add to Cart</a>';
+
+						}
 					}
 					
 					return str;

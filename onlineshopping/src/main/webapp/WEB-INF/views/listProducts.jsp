@@ -42,27 +42,28 @@
 
 						<div class="col-xs-12">
 
-							<table id="productListTable"
-								class="table table-striped table-bordered">
-								<thead>
-									<tr>
-										<th>S.No</th>
-										<th>Image</th>
-										<th>Name</th>
-										<th>Brand</th>
-										<th>Price</th>
-										<th>Qty. Available</th>
-										<th></th>
-									</tr>
-
-
-								</thead>
-
-
-							</table>
-
-
-
+							<div class="container-fluid">
+							
+								<div class="table-responsive">
+								
+									<table id="productListTable"
+										class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th>S.No</th>
+												<th>Image</th>
+												<th>Name</th>
+												<th>Brand</th>
+												<th>Price</th>
+												<th>Qty. Available</th>
+												<th></th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+								
+							</div>
+							
 						</div>
 
 					</div>
