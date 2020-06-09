@@ -20,7 +20,12 @@
 					href="${contextPath}/show/all/products">View Products</a></li>
 
 				<security:authorize access="hasAuthority('ADMIN')">
-					<li id="listProducts" class="nav-item"><a class="nav-link"
+					<li id="manageProducts" class="nav-item"><a class="nav-link"
+						href="${contextPath}/manage/products">Manage Products</a></li>
+				</security:authorize>
+				
+				<security:authorize access="hasAuthority('SUPPLIER')">
+					<li id="manageProducts" class="nav-item"><a class="nav-link"
 						href="${contextPath}/manage/products">Manage Products</a></li>
 				</security:authorize>
 			</ul>
@@ -36,14 +41,14 @@
 
 				<security:authorize access="isAuthenticated()">
 					<li class="dropdown"><a href="javascript:void(0)"
-						class="btn btn-default dropdown-toggle" id="dropdownMenu1"
+						class="btn btn-default dropdown-toggle" id="userCart"
 						data-toggle="dropdown" style="color: white">
 							${userModel.fullName} <span class="caret"></span>
 
 					</a>
 						<ul class="dropdown-menu">
 							<security:authorize access="hasAuthority('USER')">
-								<li><a href="${contextPath}/cart"> <span
+								<li><a href="${contextPath}/cart/show"> <span
 										class="glyphicon glyphicon-shopping-cart"></span> <span
 										class="badge">${userModel.cart.cartLines}</span> - &#36;
 										${userModel.cart.grandTotal}

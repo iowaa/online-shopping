@@ -23,6 +23,18 @@ $(function() {
 	case 'Manage Products':
 		$('#manageProducts').addClass('active');
 		break;
+		
+	case 'Login':
+			$('#login').addClass('active');
+			break;
+			
+	case 'Register':
+		$('#register').addClass('active');
+		break;
+			
+	case 'User Cart':
+		$('#userCart').addClass('active');
+		break;
 
 	default:
 		if (menu == "Home")
@@ -32,7 +44,7 @@ $(function() {
 		break;
 
 	}
-	
+
 	// to tackle the csrf token
 	var token = $('meta[name = "_csrf"]').attr('content');
 	var header = $('meta[name = "_csrf_header"]').attr('content');

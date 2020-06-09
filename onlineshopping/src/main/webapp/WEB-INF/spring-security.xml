@@ -27,6 +27,9 @@
 		<intercept-url pattern="/manage/**"
 			access="hasAuthority('ADMIN')" />
 
+		<intercept-url pattern="/manage/**"
+			access="hasAuthority('SUPPLIER')" />
+
 		<!-- only USER access -->
 		<intercept-url pattern="/cart/**"
 			access="hasAuthority('USER')" />
