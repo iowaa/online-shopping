@@ -56,10 +56,10 @@
 								<button name="refreshCart" value="${cartLine.id}"
 									class="btn btn-info btn-sm">
 									<span class="glyphicon glyphicon-refresh">Refresh</span>
-								</button>
-								<a href = "${contextPath}/cart/${cartLine.id}/delete" class="btn btn-danger btn-sm">
-									<span class="glyphicon glyphicon-trash">Delete</span>
-								</a>
+								</button> <a href="${contextPath}/cart/${cartLine.id}/delete"
+								class="btn btn-danger btn-sm"> <span
+									class="glyphicon glyphicon-trash">Delete</span>
+							</a>
 							</td>
 						</tr>
 					</c:forEach>
@@ -72,7 +72,8 @@
 								${userModel.cart.grandTotal}</strong></td>
 					</tr>
 					<tr>
-						<td><a href="#" class="btn btn-warning"><span
+						<td><a href="${contextPath}/show/all/products"
+							class="btn btn-warning"><span
 								class="glyphicon glyphicon-chevron-left"></span> Continue
 								Shopping</a></td>
 						<td colspan="2" class="hidden-xs"></td>
