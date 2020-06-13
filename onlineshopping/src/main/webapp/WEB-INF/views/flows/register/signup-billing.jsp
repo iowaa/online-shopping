@@ -62,7 +62,8 @@
 							</div>
 
 							<sf:button type="submit" class="btnRegister"
-								name="_eventId_submit">Confirm</sf:button>
+								name="_eventId_submit">Confirm
+							</sf:button>
 
 							<sf:button type="submit" class="btnRegister"
 								name="_eventId_personal">Back to Personal</sf:button>

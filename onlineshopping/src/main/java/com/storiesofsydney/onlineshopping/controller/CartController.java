@@ -83,4 +83,11 @@ public class CartController {
 		return "redirect:/cart/show?" + response;
 	}
 
+	@RequestMapping("/checkout")
+	public ModelAndView checkout() {
+		ModelAndView mv = new ModelAndView("checkout");
+		mv.addObject("title", "Checkout");
+		return mv;
+	}
+
 }

@@ -22,15 +22,18 @@
 				<div class="carousel-inner" role="listbox">
 					<div class="carousel-item active">
 
-						<img class="d-block img-fluid" src="http://placehold.it/900x350"
+						<img class="d-block img-fluid"
+							src="http://localhost:8080/onlineshopping/resources/images/Placeholder_1.png"
 							alt="First slide">
 					</div>
 					<div class="carousel-item">
-						<img class="d-block img-fluid" src="http://placehold.it/900x350"
+						<img class="d-block img-fluid"
+							src="http://localhost:8080/onlineshopping/resources/images/Placeholder_2.png"
 							alt="Second slide">
 					</div>
 					<div class="carousel-item">
-						<img class="d-block img-fluid" src="http://placehold.it/900x350"
+						<img class="d-block img-fluid"
+							src="http://localhost:8080/onlineshopping/resources/images/Placeholder_3.png"
 							alt="Third slide">
 					</div>
 				</div>
@@ -51,8 +54,10 @@
 
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="card h-100">
-						<a href="#"><img class="card-img-top"
-							src="http://placehold.it/700x400" alt=""></a>
+						<a href="http://localhost:8080/onlineshopping/show/1/product"><img
+							class="card-img-top"
+							src="http://localhost:8080/onlineshopping/resources/images/PRD93BF9684E7.jpg"
+							alt=""></a>
 						<div class="card-body">
 							<h4 class="card-title">
 								<a href="#">Item One</a>
@@ -69,8 +74,10 @@
 
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="card h-100">
-						<a href="#"><img class="card-img-top"
-							src="http://placehold.it/700x400" alt=""></a>
+						<a href="http://localhost:8080/onlineshopping/show/2/product"><img
+							class="card-img-top"
+							src="http://localhost:8080/onlineshopping/resources/images/PRDED6D355E84.jpg"
+							alt=""></a>
 						<div class="card-body">
 							<h4 class="card-title">
 								<a href="#">Item Two</a>
@@ -87,13 +94,13 @@
 
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="card h-100">
-						<a href="http://localhost:8080/onlineshopping/show/1/product"><img
+						<a href="http://localhost:8080/onlineshopping/show/4/product"><img
 							class="card-img-top"
-							src="http://localhost:8080/onlineshopping/resources/images/PRD9EA25C3456.jpg"
+							src="http://localhost:8080/onlineshopping/resources/images/PRD5053753F19.jpg"
 							alt=""></a>
 						<div class="card-body">
 							<h4 class="card-title">
-								<a href="#">Davco Render 20kg	</a>
+								<a href="#">Davco Render 20kg </a>
 							</h4>
 							<h5>$14.00</h5>
 							<p class="card-text">Product Info</p>
@@ -107,8 +114,10 @@
 
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="card h-100">
-						<a href="#"><img class="card-img-top"
-							src="http://placehold.it/700x400" alt=""></a>
+						<a href="http://localhost:8080/onlineshopping/show/8/product"><img
+							class="card-img-top"
+							src="http://localhost:8080/onlineshopping/resources/images/PRDC6CCC14901.jpg"
+							alt=""></a>
 						<div class="card-body">
 							<h4 class="card-title">
 								<a href="#">Item Four</a>
@@ -125,8 +134,10 @@
 
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="card h-100">
-						<a href="#"><img class="card-img-top"
-							src="http://placehold.it/700x400" alt=""></a>
+						<a href="http://localhost:8080/onlineshopping/show/1/product"><img
+							class="card-img-top"
+							src="http://localhost:8080/onlineshopping/resources/images/PRD93BF9684E7.jpg"
+							alt=""></a>
 						<div class="card-body">
 							<h4 class="card-title">
 								<a href="#">Item Five</a>
@@ -143,8 +154,10 @@
 
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="card h-100">
-						<a href="#"><img class="card-img-top"
-							src="http://placehold.it/700x400" alt=""></a>
+						<a href="http://localhost:8080/onlineshopping/show/12/product"><img
+							class="card-img-top"
+							src="http://localhost:8080/onlineshopping/resources/images/PRDBEFA80B7E6.jpg"
+							alt=""></a>
 						<div class="card-body">
 							<h4 class="card-title">
 								<a href="#">Item Six</a>

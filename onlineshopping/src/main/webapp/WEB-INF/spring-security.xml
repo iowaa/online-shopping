@@ -25,10 +25,7 @@
 
 		<!-- Only Admin Access -->
 		<intercept-url pattern="/manage/**"
-			access="hasAuthority('ADMIN')" />
-
-		<intercept-url pattern="/manage/**"
-			access="hasAuthority('SUPPLIER')" />
+			access="hasAnyAuthority('ADMIN','SUPPLIER')" />
 
 		<!-- only USER access -->
 		<intercept-url pattern="/cart/**"
